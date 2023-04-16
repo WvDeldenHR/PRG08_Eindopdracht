@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eindopdracht</title>
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+        <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+        <script defer src="predictions.js" type="module"></script>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;200;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <!-- <section>
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Predictions</a></li>
+                        <li><a href="train.html">Train</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section> -->
+
+        <section>
+            <div class="container">
+                <h1>Predict the Danceability of a song</h1>
+                <div class="content">
+                    <p class="text">If you dont have all of the data that is needed for the input fields,
+                        you can use the next <a href="https://www.chosic.com/music-genre-finder/">link</a> to find it by entering your song name</p>
+                </div>
+
+                <div class="content">
+                    <div class="content-box">
+                        <p>Duration of the song (0.00 - 6.00)</p>
+                        <input id="duration" type="text" placeholder="duration">
+                    </div>
+                    <div class="content-box">
+                        <p>Key of the song (0 - 20)</p>
+                        <input id="key" type="text" placeholder="key">
+                    </div>
+                    <div class="content-box">
+                        <p>Loudness of the song ( -20 - 0)</p>
+                        <input id="loudness" type="text" placeholder="loudness">
+                    </div>
+                    <div class="content-box">
+                        <p>Speechiness of the song (0.00 - 1.00)</p>
+                        <input id="speechiness" type="text" placeholder="speechiness">
+                    </div>
+                    <div class="content-box">
+                        <p>Acousticness of the song (0.00 - 1.00)</p>
+                        <input id="acousticness" type="text" placeholder="acousticness">
+                    </div>
+                    <div class="content-box">
+                        <p>Instrumentalness of the song (0.00 - 1.00)</p>
+                        <input id="instrumentalness"  type="text" placeholder="instrumentalness">
+                    </div>
+                    <div class="content-box">
+                        <p>Tempo of the song (0 - 200)</p>
+                        <input id="tempo" type="text" placeholder="tempo">
+                    </div>
+
+                    <button id="predictionsButton">Predict</button>
+
+                    <div id="result"></div>
+            </div>
+        </section>
+    </body>
+</html>
